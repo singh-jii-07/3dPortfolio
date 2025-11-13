@@ -51,12 +51,7 @@ const About = () => {
         variants={fadeIn("", "", 0.1, 1)}
         className="mt-4 text-secondary text-[14px] sm:text-[17px] max-w-3xl sm:leading-[30px] leading-1"
       >
-        Hi, I’m Swastik Yadav — a passionate Frontend / Full Stack Developer
-        with hands-on experience in building modern, responsive web applications
-        using technologies like React.js, Tailwind CSS, Node.js, and MongoDB.
-        I’ve worked on real-world freelance projects and participated in
-        hackathons like ReImagine, where I pushed my creativity and technical
-        skills to the next level.
+       I am a passionate Full Stack Developer skilled in the MERN stack, focused on building responsive, efficient, and user-friendly web applications. I enjoy writing clean, maintainable code and continuously learning new technologies to improve product quality and user experience.
       </motion.p>
       <div className="mt-20 flex  flex-wrap gap-10">
         {services.map((service, index) => (

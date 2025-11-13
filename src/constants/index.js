@@ -119,11 +119,11 @@ const technologies = [
 
 const experiences = [
   {
-    title: "Freelance Frontend Developer",
-    company_name: "Self-employed",
+    title: "Frontend Developer Intern",
+    company_name: "CodeAlpha",
     icon: freelance, // Replace with any icon you like
     iconBg: "#0188E3",
-    date: "Jan 2023 - Present",
+    date: "Oct 2024 - Nov 2024",
     points: [
       "Built responsive and interactive web apps using React.js, Tailwind CSS, and GSAP.",
       "Developed and deployed modern landing pages and portfolio websites for clients.",
@@ -132,16 +132,18 @@ const experiences = [
     ],
   },
   {
-    title: "Full Stack Development Trainee",
-    company_name: "Sheryians Coding School",
+    title: "Full Stack Development Intern",
+    company_name: "NKPR & Promotion",
     icon: sheryians, // Or institute logo
     iconBg: "#ffff",
-    date: "Aug 2023 - Mar 2025",
+    date: "July 2025 - Oct 2025",
     points: [
-      "Completed an intensive training program focused on MERN stack development.",
-      "Built multiple full-stack projects, including CRUD apps and authentication systems.",
+      "Developed and maintained the company’s website using React.js and modern CSS.",
+      "Improved overall performance, responsiveness, and UI/UX across all devices.",
       "Worked with tools like Node.js, Express.js, MongoDB, React.js, and Git.",
       "Gained hands-on experience in deploying apps and following clean code practices.",
+      "Implemented new features, design updates, and interactive components.",
+      "Collaborated with the team to enhance layout consistency and ensure smooth user experience."
     ],
   },
 ];
