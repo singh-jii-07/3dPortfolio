@@ -22,9 +22,10 @@ import {
   macbookpro,
   falverra,
   tripguide,
-  threejs,
+  reactnative
 } from "../assets";
-
+import express from '../assets/Express.png'
+import Bootstrap from '../assets/Bootstrap.png'
 export const navLinks = [
   {
     id: "about",
@@ -75,8 +76,8 @@ const technologies = [
     icon: tailwind,
   },
   {
-    name: "Three JS",
-    icon: threejs,
+    name: "Bootstrap",
+    icon: Bootstrap,
   },
   {
     name: "JavaScript",
@@ -93,13 +94,13 @@ const technologies = [
     icon: html,
   },
   {
-    name: "CSS 3",
+    name: "CSS",
     icon: css,
   },
 
   {
-    name: "Redux Toolkit",
-    icon: redux,
+    name: "Express JS",
+    icon: express,
   },
 
   {
@@ -114,6 +115,10 @@ const technologies = [
   {
     name: "figma",
     icon: figma,
+  },
+  {
+    name: "react native",
+    icon: reactnative,
   },
 ];
 

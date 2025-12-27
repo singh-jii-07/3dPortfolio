@@ -34,6 +34,7 @@ const Tech = () => {
         {visibleTechs.map((tech) => (
           <div className="sm:w-36 w-28 h-28 sm:h-36" key={tech.name}>
             <BallCanvas icon={tech.icon} />
+            <p className="text-center uppercase text-[#797777] font-black text-md">{tech.name}</p>
           </div>
         ))}
 
