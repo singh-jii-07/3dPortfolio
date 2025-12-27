@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { styles } from "../styles";
 import { navLinks } from "../constants";
 import { logo, menu, close } from "../assets";
+import nk from '../assets/Nklogo.png'
 
 const Navbar = () => {
   const [active, setActive] = useState("");
@@ -22,7 +23,7 @@ const Navbar = () => {
           }}
         >
           <img
-            src={`${logo}${logo.includes("?") ? "&" : "?"}tr=f-auto`}
+            src={`${nk}${nk.includes("?") ? "&" : "?"}tr=f-auto`}
             alt="logo"
             loading="lazy"
             className="w-16 object-contain "
