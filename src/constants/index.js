@@ -52,7 +52,7 @@ const services = [
     icon: web,
   },
   {
-    title: "React Developer",
+    title: "App Developer",
     icon: mobile,
   },
   {
@@ -89,7 +89,7 @@ const technologies = [
   },
 
   {
-    name: "HTML 5",
+    name: "HTML ",
     icon: html,
   },
   {
@@ -121,7 +121,7 @@ const experiences = [
   {
     title: "Frontend Developer Intern",
     company_name: "CodeAlpha",
-    icon: freelance, // Replace with any icon you like
+    icon: freelance, 
     iconBg: "#0188E3",
     date: "Oct 2024 - Nov 2024",
     points: [
