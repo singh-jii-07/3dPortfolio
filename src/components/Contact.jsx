@@ -4,64 +4,57 @@ import { styles } from "../styles";
 import { EarthCanvas } from "./canvas";
 import { slideIn } from "../utils/motion";
 import { SectionWrapper } from "../hoc";
-import emailjs from "@emailjs/browser";
-
-// template_49jw5yq
-// service_9gvq101
-// 3lDtCP31mFt_52s7F
 
 const Contact = () => {
   const formRef = useRef();
-  const [form, setform] = useState({
+  const [form, setForm] = useState({
     name: "",
     email: "",
     message: "",
   });
-  const [loading, setloading] = useState(false);
-  const handlechange = (e) => {
+  const [loading, setLoading] = useState(false);
+  const [result, setResult] = useState("");
+
+  const handleChange = (e) => {
     const { name, value } = e.target;
-    setform({ ...form, [name]: value });
+    setForm({ ...form, [name]: value });
   };
-  const handlesubmit = (e) => {
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    setloading(true);
+    setLoading(true);
+    setResult("Sending...");
 
-    // template_49jw5yq
-    // service_9gvq101
-    // 3lDtCP31mFt_52s7F
+    const formData = new FormData();
+    formData.append("access_key", "e01e8c6f-6f09-43db-adf7-1e7a0e42bbc3");
+    formData.append("name", form.name);
+    formData.append("email", form.email);
+    formData.append("message", form.message);
 
-    emailjs
-      .send(
-        "service_9gvq101",
-        "template_49jw5yq",
-        {
-          from_name: form.name,
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: formData,
+      });
 
-          from_email: form.email,
+      const data = await response.json();
 
-          message: form.message,
-        },
-        "3lDtCP31mFt_52s7F"
-      )
-      .then(
-        () => {
-          setloading(false);
-          alert("Thank you. I will get back to you as soon as possible");
-          setform({
-            name: "",
-            email: "",
-            message: "",
-          });
-        },
-        (error) => {
-          setloading(false);
-          console.log(error);
-          alert("Something went wrong.");
-        }
-      );
+      if (data.success) {
+        setResult("Message sent successfully!");
+        setForm({ name: "", email: "", message: "" });
+      } else {
+        setResult("Something went wrong!");
+      }
+    } catch (error) {
+      setResult("Error sending message");
+    } finally {
+      setLoading(false);
+    }
   };
+
   return (
     <div className="xl:mt-12 xl:flex-row flex-col-reverse flex gap-10 overflow-hidden">
+      {/* LEFT SIDE FORM */}
       <motion.div
         variants={slideIn("left", "tween", 0.2, 1)}
         className="flex-[0.75] bg-black-100 p-8 rounded-2xl"
@@ -71,7 +64,7 @@ const Contact = () => {
 
         <form
           ref={formRef}
-          onSubmit={handlesubmit}
+          onSubmit={handleSubmit}
           className="mt-12 flex flex-col gap-8"
         >
           <label className="flex flex-col">
@@ -80,42 +73,54 @@ const Contact = () => {
               type="text"
               name="name"
               value={form.name}
-              onChange={handlechange}
-              placeholder="what's your name?"
+              onChange={handleChange}
+              placeholder="What's your name?"
+              required
               className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium"
             />
           </label>
+
           <label className="flex flex-col">
             <span className="text-white font-medium mb-4">Your Email</span>
             <input
               type="email"
               name="email"
               value={form.email}
-              onChange={handlechange}
-              placeholder="what's your email?"
+              onChange={handleChange}
+              placeholder="What's your email?"
+              required
               className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium"
             />
           </label>
+
           <label className="flex flex-col">
             <span className="text-white font-medium mb-4">Your Message</span>
             <textarea
               rows={5}
-              type="text"
               name="message"
               value={form.message}
-              onChange={handlechange}
-              placeholder="what do you want to say?"
+              onChange={handleChange}
+              placeholder="What do you want to say?"
+              required
               className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium"
             />
           </label>
+
           <button
             type="submit"
+            disabled={loading}
             className="bg-tertiary py-3 px-8 outline-none w-fit text-white font-bold shadow-md shadow-primary rounded-xl"
           >
             {loading ? "Sending..." : "Send"}
           </button>
+
+          {result && (
+            <p className="text-sm text-secondary mt-2">{result}</p>
+          )}
         </form>
       </motion.div>
+
+      {/* RIGHT SIDE EARTH */}
       <motion.div
         variants={slideIn("right", "tween", 0.2, 1)}
         className="xl:flex-1 xl:h-auto md:h-[550px] h-[350px]"
