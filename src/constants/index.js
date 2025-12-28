@@ -22,10 +22,13 @@ import {
   macbookpro,
   falverra,
   tripguide,
-  reactnative
+  reactnative,
+  book
 } from "../assets";
-import express from '../assets/Express.png'
-import Bootstrap from '../assets/Bootstrap.png'
+import express from "../assets/Express.png";
+import Bootstrap from "../assets/Bootstrap.png";
+import Civilissue from "../assets/Civilissue.png";
+import socialmedia from '../assets/socialmedia.png'
 export const navLinks = [
   {
     id: "about",
@@ -126,7 +129,7 @@ const experiences = [
   {
     title: "Frontend Developer Intern",
     company_name: "CodeAlpha",
-    icon: freelance, 
+    icon: freelance,
     iconBg: "#0188E3",
     date: "Oct 2024 - Nov 2024",
     points: [
@@ -148,7 +151,7 @@ const experiences = [
       "Worked with tools like Node.js, Express.js, MongoDB, React.js, and Git.",
       "Gained hands-on experience in deploying apps and following clean code practices.",
       "Implemented new features, design updates, and interactive components.",
-      "Collaborated with the team to enhance layout consistency and ensure smooth user experience."
+      "Collaborated with the team to enhance layout consistency and ensure smooth user experience.",
     ],
   },
 ];
@@ -182,38 +185,38 @@ const testimonials = [
 
 const projects = [
   {
-    name: "MacBookPro-redesign",
+    name: "SamadhanSetu",
     description:
-      "A visually engaging website that showcases a redesigned MacBook Pro with smooth animations and a realistic 3D model, offering users an interactive and immersive way to explore the product’s look and features.",
+      "A MERN-based platform where citizens report geotagged civic issues with images, and authorities track, assign, and resolve them through a map-driven admin dashboard with status updates and analytics.",
     tags: [
       {
         name: "react",
         color: "blue-text-gradient",
       },
       {
-        name: "three.js",
+        name: "node JS",
         color: "green-text-gradient",
       },
       {
-        name: "tailwind",
+        name: "mongodb",
         color: "pink-text-gradient",
       },
     ],
-    image: macbookpro,
-    source_code_link: "https://github.com/gitswastik08/macbook_landingpage",
+    image: Civilissue,
+    source_code_link: "https://github.com/chandandubey411/cgc-hacathon.git",
     live_website_link: "https://macbookpro3d.netlify.app/",
   },
   {
-    name: "Falverra Redesign",
+    name: "BaatCheet",
     description:
-      "A sleek and animated website redesign for Falverra, combining a clean layout with smooth transitions to deliver an engaging, modern browsing experience that highlights the brand’s visual identity and message.",
+      " A real-time MERN-based social media app that lets users connect, share posts, and interact through likes, comments, and live conversations in a secure and responsive environment..",
     tags: [
       {
-        name: "react",
+        name: "RealTimeApp",
         color: "blue-text-gradient",
       },
       {
-        name: "tailwind",
+        name: "WebSockets",
         color: "pink-text-gradient",
       },
       {
@@ -221,32 +224,30 @@ const projects = [
         color: "green-text-gradient",
       },
     ],
-    image: falverra,
-    source_code_link: "https://github.com/gitswastik08/falverra-redesign",
+    image: socialmedia,
+    source_code_link: "https://github.com/singh-jii-07/Social_Media.git",
     live_website_link: "https://falverra-recode.netlify.app/",
   },
   {
-    name: "Trip Guide",
+    name: "Book Bazar",
     description:
-      "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
+      "Book Bazar is a MERN-based e-commerce platform for buying and selling books online. Users can browse books, view details, add items to cart, and place orders through a secure and user-friendly interface.",
     tags: [
       {
-        name: "nextjs",
+        name: "OnlineStore",
         color: "blue-text-gradient",
       },
       {
-        name: "supabase",
+        name: "MERNStack",
         color: "green-text-gradient",
       },
       {
-        name: "css",
+        name: "ShoppingCart",
         color: "pink-text-gradient",
       },
     ],
-    image: tripguide,
-    // github link ⬇️
-    source_code_link: "https://github.com/",
-    // project link ⬇️
+    image: book,
+    source_code_link: "https://github.com/singh-jii-07/Book-Selling-App.git",
     live_website_link: "https://app.netlify.com/teams/gitswastik08/projects",
   },
 ];
