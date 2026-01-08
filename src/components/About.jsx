@@ -6,6 +6,8 @@ import { services } from "../constants";
 import { fadeIn, textVariant } from "../utils/motion";
 import { div } from "framer-motion/client";
 import { SectionWrapper } from "../hoc";
+import { github,linkedin } from "../assets";
+
 
 const ServiceCard = ({ index, title, icon }) => {
   return (
@@ -53,6 +55,29 @@ const About = () => {
       >
        I am a passionate Full Stack Developer skilled in the MERN stack, focused on building responsive, efficient, and user-friendly web applications. I enjoy writing clean, maintainable code and continuously learning new technologies to improve product quality and user experience.
       </motion.p>
+    <div className="flex items-center gap-5 mt-6">
+  {/* GitHub */}
+  <a
+    href="https://github.com/singh-jii-07"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="flex items-center gap-2 text-white hover:text-[#915eff] transition-colors"
+  >
+    <img src={github} alt="GitHub" className="w-6 h-6" />
+    <span className="text-sm">GitHub</span>
+  </a>
+
+  {/* LinkedIn */}
+  <a
+    href="https://www.linkedin.com/in/nilesh-kumar-9831972a6/"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="flex items-center gap-2 text-white hover:text-[#915eff] transition-colors"
+  >
+    <img src={linkedin} alt="LinkedIn" className="w-6 h-6" />
+    <span className="text-sm">LinkedIn</span>
+  </a>
+</div>
       <div className="mt-20 flex  flex-wrap gap-10">
         {services.map((service, index) => (
           <ServiceCard key={index} index={index} {...service} />

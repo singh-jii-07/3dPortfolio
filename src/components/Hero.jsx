@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { ComputersCanvas } from "./canvas";
 import { styles } from "../styles";
-
+import { github } from "../assets";
 
 const Hero = () => {
   return (
@@ -19,7 +19,8 @@ const Hero = () => {
           </h1>
           <p className={`${styles.heroSubText} mt-2 text-white text-[16px]`}>
             i'm Full Stack Developer (MERN) <br className="sm:block hidden" />{" "}
-            MERN Stack Developer building clean, responsive and user-focused web applications .
+            MERN Stack Developer building clean, responsive and user-focused web
+            applications .
           </p>
         </div>
       </div>

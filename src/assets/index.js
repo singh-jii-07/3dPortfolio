@@ -63,7 +63,7 @@ const reactnative =
   "https://imgs.search.brave.com/-wRYfmc8MFTE9dYoFBioZSxfu45QaJyuKfJ3h68gZGM/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jZG40/Lmljb25maW5kZXIu/Y29tL2RhdGEvaWNv/bnMvbG9nb3MtMy82/MDAvUmVhY3QuanNf/bG9nby01MTIucG5n";
   const book=
   "https://cdn.dribbble.com/userupload/6917494/file/original-33c14f700366c6e5479e3086c2632f8a.jpg"
-
+const linkedin ="https://imgs.search.brave.com/ZtKciIPFtc5ZJmg268AwqSgwqDgv_vXXQKT3XOxZ5f4/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/bG9nby53aW5lL2Ev/bG9nby9MaW5rZWRJ/bi9MaW5rZWRJbi1J/Y29uLUxvZ28ud2lu/ZS5zdmc"
 export {
   book,
   logo,
@@ -95,4 +95,5 @@ export {
   falverra,
   tripguide,
   reactnative,
+  linkedin
 };
